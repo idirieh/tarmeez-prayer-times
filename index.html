@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8a91cbe719.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="./node_modules/axios/dist/axios.min.js"></script> -->
+    <script src="./node_modules/axios/dist/axios.js"></script>
+    <title>Prayers Time</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <i class="fa-regular fa-moon fa-4x"></i>
+            <h1 class="main-title">Islamic Prayer Times</h1>
+            <p class="hero-text">Find accurate prayer times for your location</p>
+        </header>
+        <main>
+            <div class="location-selection">
+                
+                <h2><i class="fa-solid fa-location-dot fa-lg icon"></i>Select Location</h2>
+                <div class="wrapper">
+                    <legend>
+                        <label for="country"><h4>Country</h4></label>
+                        <select id="country" name="country" class="form-control" onChange="updateCities()">
+                            <option value="" selected>--Select a Country--</option>                       
+                            <!-- <option value="SA">Saudi Arabia</option>
+                            <option value="QA">Qatar</option>
+                            <option value="TR">Turkey</option>
+                            <option value="OM">Oman</option>
+                            <option value="DZ">Algeria</option>
+                            <option value="BH">Bahrain</option>
+                            <option value="KM">Comoros</option>
+                            <option value="DJ">Djibouti</option>
+                            <option value="EG">Egypt</option>
+                            <option value="IQ">Iraq</option>
+                            <option value="JO">Jordan</option>
+                            <option value="KW">Kuwait</option>
+                            <option value="LB">Lebanon</option>
+                            <option value="LY">Libya</option>
+                            <option value="MR">Mauritania</option>
+                            <option value="MA">Morocco</option>
+                            <option value="PS">Palestine</option>
+                            <option value="SO">Somalia</option>
+                            <option value="SD">Sudan</option>
+                            <option value="SY">Syria</option>
+                            <option value="TN">Tunisia</option>
+                            <option value="AE">United Arab Emirates</option>
+                            <option value="YE">Yemen</option> -->
+                        </select>
+                    </legend>
+                    <legend>
+                        <label for="city"><h4>City</h4></label>
+                        <select name="city" id="city"></select>
+                    </legend>
+                    <button id="searchBtn">Search</button>
+                </div>
+        
+            </div>
+            <div class="result">
+                <h2>Prayer Times for <span id="result-city">Kuala Lumpur</span>, <span id="result-country">Malaysia</span></h2>
+                <p id="date">Tuesday, December 17, 2024</p>
+                <p id="hijri-date"></p>
+                <div class="prayers-table">
+                    <div class="prayer-item">                        
+                        <p>Fajr</p>
+                        <div class="time"><i class="fa-regular fa-clock"></i> <span id="fajr-time">00:00</span></div>
+                    </div>
+                    <div class="prayer-item">
+                        <p>Sunrise</p>
+                        <div class="time"><i class="fa-regular fa-clock"></i> <span id="sunrise-time">00:00</span></div>
+                    </div>
+                    <div class="prayer-item">
+                        <p>Dhuhr</p>
+                        <div class="time"><i class="fa-regular fa-clock"></i> <span id="dhuhr-time">00:00</span></div>
+                    </div>
+                    <div class="prayer-item">
+                        <p>Asr</p>
+                        <div class="time"><i class="fa-regular fa-clock"></i> <span id="asr-time">00:00</span></div>
+                    </div>
+                    <div class="prayer-item">
+                        <p>Maghrib</p>
+                        <div class="time"><i class="fa-regular fa-clock"></i> <span id="maghrib-time">00:00</span></div>
+                    </div>
+                    <div class="prayer-item">
+                        <p>Isha</p>
+                        <div class="time"><i class="fa-regular fa-clock"></i> <span id="isha-time">00:00</span></div>
+                    </div>
+                </div>
+            </div>
+            <p>☪️ Providing accurate prayer times for Muslims worldwide</p>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

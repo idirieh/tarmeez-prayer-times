@@ -1,0 +1,178 @@
+
+/* CSS Resets */
+*, *::before, *::after {
+    box-sizing: border-box;
+    /* outline: 3px solid red; */
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+ul[class], ol[class] {
+    list-style: none;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+
+/* General CSS */
+
+body {
+    background-image: url(bg-image.jpg);
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 850px;
+    text-align: center;
+    background-color: rgba(255, 228, 196, 85%);
+    padding: 2rem;
+    margin-inline: auto;
+    border-radius: 5px;
+}
+
+header {
+    padding: 2em 0;
+}
+
+.main-title {
+    font-size: 2.5rem;
+}
+
+.location-selection {
+    background-color: #fff;
+    text-align: start;
+    width: 80%;
+    margin-inline: auto;
+    padding: 0 2rem 2rem;
+    border-radius: 5px;
+}
+
+.location-selection h2 {
+    padding: 2rem 0;
+
+}
+
+.location-selection .icon {
+    margin-right: .3rem;
+}
+
+.location-selection .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.location-selection label {
+    font-size: 1.2rem;
+    display: block;
+    padding-bottom: .7rem;
+}
+
+.location-selection select {
+    background-color: #fff;
+    width: 260px;
+    border: none;
+    outline: 1px solid black;
+    padding: .3rem;
+    border-radius: 5px;
+}
+
+#searchBtn {
+    background-color: #007662;
+    color: #fff;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: .5rem 0;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#searchBtn:hover {
+    background-color: #015043;
+}
+
+.result {
+    padding: 2rem 0;
+    visibility: hidden;
+}
+
+.prayers-table {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    padding: 2rem 0;
+}
+
+.prayers-table .prayer-item {
+    background-color: #fff;
+    color:#222;
+    font-size: 1.25rem;
+    font-weight: 600;
+    outline: 1px solid black;
+    padding: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 4px 9px 0px 0px rgba(0, 0, 0, 50%);
+    transition: 500ms;
+}
+
+.prayers-table .prayer-item:hover {
+    scale: 1.1;
+}
+
+.prayers-table .prayer-item .time {
+    color: #007662;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .location-selection {
+        width: 100%;
+    }
+
+    .location-selection select {
+        width: 100%;
+    }
+
+    .location-selection .wrapper {
+        flex-direction: column;
+    }
+
+    .prayers-table {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+}
